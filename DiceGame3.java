@@ -23,9 +23,12 @@ public class DiceGame3{
             """
         );
 
-        for(int i = 1; i <= 3; i++){
+        for(int i = 1; i <= 10; i++){
             
             myDice.roll();
+
+            //System.out.println(myDice.toString());
+
             System.out.println("Please guess your first number: ");
             int guessNum1 = input.nextInt();
                 
@@ -35,7 +38,7 @@ public class DiceGame3{
             System.out.println(myDice.toString());
             System.out.println("Your total is " + myDice.getSumTotal());
 
-            if(guessNum1 == myDice.getDie1() && guessNum2 == myDice.getDie2()){
+            if(guessNum1 == myDice.getDie1() && guessNum2 == myDice.getDie2() || guessNum1 == myDice.getDie2() && guessNum2 == myDice.getDie1()){
                 System.out.println("You won! You guessed both dice correctly.");
                 win = true;
                 break;
