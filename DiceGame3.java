@@ -23,11 +23,11 @@ public class DiceGame3{
             """
         );
 
-        for(int i = 1; i <= 10; i++){
+        for(int i = 0; i < 3; i++){
             
             myDice.roll();
 
-            //System.out.println(myDice.toString());
+            System.out.println(myDice.toString());
 
             System.out.println("Please guess your first number: ");
             int guessNum1 = input.nextInt();
@@ -35,7 +35,7 @@ public class DiceGame3{
             System.out.println("Please your second number: ");
             int guessNum2 = input.nextInt();
 
-            System.out.println(myDice.toString());
+            //System.out.println(myDice.toString());
             System.out.println("Your total is " + myDice.getSumTotal());
 
             if(guessNum1 == myDice.getDie1() && guessNum2 == myDice.getDie2() || guessNum1 == myDice.getDie2() && guessNum2 == myDice.getDie1()){
@@ -49,12 +49,12 @@ public class DiceGame3{
                 break;
 
             }else if(myDice.getSumTotal() == 6){
-                System.out.println("You won! You dice numbers add up to 6.");
+                System.out.println("You won! Your rolled dice numbers add up to 6.");
                 win = true;
                 break;
 
             }else{
-                if(i < 3){
+                if(i < 2){
                     System.out.println("try again");
                 }
             }
